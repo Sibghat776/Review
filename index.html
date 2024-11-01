@@ -14,6 +14,10 @@
             box-sizing: border-box;
         }
 
+        body {
+            background-color: rgb(63, 63, 63);
+        }
+
         .main {
             height: 100vh;
             width: 100vw;
@@ -23,27 +27,84 @@
             flex-direction: column;
         }
 
+        .form {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 2.5%;
+        }
+
         .heading {
             text-transform: uppercase;
             font-family: "Mitr", sans-serif;
             letter-spacing: 2px;
             padding: 10px;
             margin-bottom: 20px;
+            color: white;
         }
-        .heading > h1 > span {
+
+        .heading>h1>span {
             border-bottom: 3px solid rgb(1, 23, 226);
             padding: 10px;
             padding-right: 0px;
         }
 
         .form {
-            height: 70vh;
-            width: 60vw;
+            height: 80vh;
+            width: 70vw;
             background-color: aliceblue;
-            box-shadow: 8px 8px 7px 1px rgba(1, 23, 226, 0.8);
+            box-shadow: 8px 8px 7px 1px rgba(210, 214, 255, 0.8);
             border-left: 1px solid black;
             border-top: 1px solid black;
             border-radius: 10px;
+        }
+
+        .pic {
+            height: 140px;
+            width: 140px;
+            background-color: rgb(1, 23, 226);
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 11px -5px 0px 0px rgb(0, 0, 0);
+        }
+        .pic > img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .name , .jobTitle {
+            padding: 1vw;
+            font-family: "Mitr", sans-serif;
+            font-size: 1.4rem;
+        }
+        .jobTitle {
+            font-size: 1.1rem;
+            color: rgb(1, 23, 226);
+            
+        }
+        .review {
+            text-align: center;
+            padding: 3vw;
+            padding-top: 1vw;
+            font-family: "Manrope", sans-serif;
+            font-weight: bold;
+            word-spacing: 3px;
+        }
+        .btns button {
+            padding: 8px 25px;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            font-size: 1.1vw;
+            font-family: "Roboto";
+            font-weight: bold;
+            border-radius: 5px;
+            transition: all 0.4s ease-in;
+        }
+        .btns button:hover {
+            background-color: white;
+            color: black;
+            box-sizing: border-box;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -53,11 +114,25 @@
         <div class="heading">
             <h1>Our <span>Rev</span>iew</h1>
         </div>
-        <div class="form"></div>
+        <div class="form">
+            <div class="pic">
+                <img src="img 2.avif" alt="">
+            </div>
+            <div class="name">
+                <h2>Name</h2>
+            </div>
+            <div class="jobTitle">
+                <h2>Job Name</h2>
+            </div>
+            <div class="review">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quo incidunt consectetur molestiae quisquam praesentium. Rem quia voluptatum officiis repellat consequatur. Accusantium odio ipsum adipisci natus, eius laboriosam necessitatibus libero.</p>
+            </div>
+            <div class="btns">
+                <button onclick="nextHandler()">Previous</button>
+                <button onclick="previousHandler()">Next</button>
+            </div>
+        </div>
     </div>
-
-
-
     <script src="app.js"></script>
 </body>
 

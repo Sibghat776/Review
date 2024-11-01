@@ -26,3 +26,5 @@ const jobSeekers = [
     }
 ];
 
+let 
+
