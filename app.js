@@ -6,6 +6,7 @@ const jobSeekers = [
     },
     {
         name: "Sara Khan",
+        img: "img 2.avif",
         jobDescription: "Graphic Designer",
         review: "Sara is a talented graphic designer with expertise in UI/UX design and brand identity. She excels in creating visually appealing designs that resonate with target audiences. Her creative approach and ability to work collaboratively with clients ensure that every project reflects their vision and exceeds expectations."
     },
@@ -26,5 +27,21 @@ const jobSeekers = [
     }
 ];
 
-let 
+let userName = document.querySelector(".name")
+let userImg = document.querySelector(".pic")
+let job = document.querySelector(".jobTitle")
+let review = document.querySelector(".review")
 
+function nextHandler(jobSeekers) {    
+    userName.innerHTML = jobSeekers[0].name
+    job.innerHTML = jobSeekers[0].jobDescription
+    review.innerHTML = jobSeekers[0].review
+    userImg.innerHTML = jobSeekers[0].img
+
+}
+function previousHandler() {
+    userName.innerHTML = jobSeekers[1].name
+    review.innerHTML = jobSeekers[1].review
+    userImg.innerHTML = jobSeekers[1].img
+    job.innerHTML = jobSeekers[1].jobDescription
+}
